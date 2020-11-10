@@ -172,6 +172,36 @@ class _MyHomePageState extends State<MyHomePage> {
                   }),
             ),
 
+            ///Top categories slide
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 22),
+              child: Text(
+                "Top categories",
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 22,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 240,
+              padding: EdgeInsets.only(left: 22),
+              child: ListView.builder(
+                  itemCount: categories.length,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return CategoryTile(
+                      categoryName: categories[index].categoryName,
+                      imgAssetPath: categories[index].imgAssetPath,
+                      color1: categories[index].color1,
+                      color2: categories[index].color2,
+                    );
+                  }),
+            ),
 
           ],
         ),
