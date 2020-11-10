@@ -1,19 +1,13 @@
 # flutter_shopping_app
 
-A new Flutter project.
+A simple ecommerce app demo with flutter
 
-## Getting Started
+(_this project is only for getting familiar with flutter_)
 
-This project is a starting point for a Flutter application.
+![Alt Text](flutter_shopping_app_output.gif)
 
-A few resources to get you started if this is your first Flutter project:
+-------
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+This project implemented according to below Tutorial
 
 [link to the tutorial](https://codesource.io/building-an-ecommerce-app-with-flutter/)
