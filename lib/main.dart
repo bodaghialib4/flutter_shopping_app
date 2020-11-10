@@ -128,6 +128,51 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
 
+            /// The Best Selling slide
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 22),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    "Best Selling",
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 22,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 12,
+                  ),
+                  Text("This week"),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 240,
+              padding: EdgeInsets.only(left: 22),
+              child: ListView.builder(
+                  itemCount: products.length,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return ProductTile(
+                      productName: products[index].productName,
+                      imgUrl: products[index].imgUrl,
+                      priceInDollars: products[index].priceInDollars,
+                      rating: products[index].rating,
+                      noOfRating: products[index].noOfRating,
+                    );
+                  }),
+            ),
+
+
           ],
         ),
       ),
