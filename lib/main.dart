@@ -224,10 +224,69 @@ class StarRating extends StatelessWidget {
 }
 
 class ProductTile extends StatelessWidget {
+  final String productName;
+  final String imgUrl;
+  final int priceInDollars;
+  final int rating;
+  final int noOfRating;
+
+  ProductTile(
+      {this.productName,
+      this.imgUrl,
+      this.priceInDollars,
+      this.rating,
+      this.noOfRating});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Container(
+      margin: EdgeInsets.only(right: 16),
+      child: Column(
+        children: <Widget>[
+          Container(
+            child: Stack(
+              children: <Widget>[
+                Image.asset("assets/productImage.png",
+                    height: 150, fit: BoxFit.cover),
+                Container(
+                  height: 25,
+                  width: 45,
+                  margin: EdgeInsets.only(left: 8, top: 8),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    gradient: LinearGradient(colors: [
+                      const Color(0xff8EA2FF).withOpacity(0.5),
+                      const Color(0xff557AC7).withOpacity(0.5),
+                    ]),
+                  ),
+                  child: Text("\$$priceInDollars",
+                      style: TextStyle(color: Colors.white)),
+                )
+              ],
+            ),
+          ),
+          Text(productName),
+          SizedBox(
+            height: 8,
+          ),
+          Row(
+            children: <Widget>[
+              StarRating(
+                rating: rating,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                "($noOfRating)",
+                style: TextStyle(color: textGrey, fontSize: 12),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
 
