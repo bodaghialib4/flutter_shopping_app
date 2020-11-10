@@ -4,6 +4,7 @@ import 'package:flutter_shopping_app/models/category_model.dart';
 import 'package:flutter_shopping_app/models/product_model.dart';
 import 'package:flutter_shopping_app/models/trending_product_model.dart';
 import 'package:flutter_shopping_app/resources/colors.dart';
+import 'package:flutter_shopping_app/views/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+//      home: MyHomePage(),
+      home: Home(),
     );
   }
 }
