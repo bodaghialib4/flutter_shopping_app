@@ -85,6 +85,49 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
 
+            ///Trending products slide
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 22),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    "Today Trending",
+                    style: TextStyle(color: Colors.black87, fontSize: 22),
+                  ),
+                  SizedBox(
+                    width: 12,
+                  ),
+                  Text("30 June"),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 22),
+              height: 150,
+              child: ListView.builder(
+                itemCount: trendingProducts.length,
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return TrendingTile(
+                    productName: trendingProducts[index].productName,
+                    storeName: trendingProducts[index].storeName,
+                    imgUrl: trendingProducts[index].imgUrl,
+                    priceInDollars: trendingProducts[index].priceInDollars,
+                    rating: trendingProducts[index].rating,
+                    noOfRating: trendingProducts[index].noOfRating,
+                  );
+                },
+              ),
+            ),
+
           ],
         ),
       ),
