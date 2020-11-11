@@ -4,7 +4,7 @@ A simple ecommerce app demo with flutter
 
 (_this project is only for getting familiar with flutter_)
 
-![Alt Text](flutter_shopping_app_output.gif)
+![flutter shopping app output implemented by Ali Bodaghi](flutter_shopping_app_output.gif)
 
 -------
 
